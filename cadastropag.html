@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Orçamento</title>
+    <link rel="stylesheet" href="cadastrocliente.css">
+<body>
+    <ul class="menu">
+        <li>
+            <button id="cliente" onmouseover="showSubButtons('sub-cliente')">Clientes</button>
+            <ul id="sub-cliente" class="sub-buttons">
+                <li><button>Cadastro de Clientes</button></li>
+                <li><button>Busca de Clientes</button></li>
+            </ul>
+        </li>
+        <li>
+            <button id="orcamento" onmouseover="showSubButtons('sub-orcamento')">Orçamentos</button>
+            <ul id="sub-orcamento" class="sub-buttons">
+                <li><button>Novo Orçamento</button></li>
+                <li><button>Busca de Orçamento</button></li>
+            </ul>
+        </li>
+        <li>
+            <button id="nf" onmouseover="showSubButtons('sub-nf')">Nota Fiscal</button>
+            <ul id="sub-nf" class="sub-buttons">
+                <li><button>Cadastro de Nota Fiscal</button></li>
+                <li><button>Buscar NFs</button></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Cadastro de Orçamento</h1>
+            <form>
+                <div class="form-group">
+                    <label for="nomeCliente" class="form-label">Nome do Cliente:</label>
+                    <input type="text" id="nomeCliente" class="form-input" required>
+                </div>
+                <div class="form-quantidade">
+                    <label for="quantidade" class="form-label">Quantidade:</label>
+                    <input type="number" id="quantidade" class="form-input" required>
+                </div>
+                <div class="form-quantidade">
+                    <label for="tamanho" class="form-label">Tamanho:</label>
+                    <input type="text" id="tamanho" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipoSubstrato" class="form-label">Substrato:</label>
+                    <select id="tipoSubstrato" class="form-input" required>
+                        <option value="offset63g">Offset 63g</option>
+                        <option value="offset75g">Offset 75g</option>
+                        <option value="offset90g">Offset 90g</option>
+                        <option value="offset120g">Offset 120g</option>
+                        <option value="offset150g">Offset 150g</option>
+                        <option value="offset180g">Offset 180g</option>
+                        <option value="offset240g">Offset 240g</option>
+                        <option value="jornal53g">Jornal 53g</option>
+                        <option value="coucheb90g">Couche B. 90g</option>
+                        <option value="coucheb115g">Couche B. 115g</option>
+                        <option value="coucheb150g">Couche B. 150g</option>
+                        <option value="coucheb170g">Couche B. 170g</option>
+                        <option value="coucheb250g">Couche B. 250g</option>
+                        <option value="coucheb300g">Couche B. 300g</option>
+                        <option value="couchef90g">Couche F. 90g</option>
+                        <option value="couchef115g">Couche F. 115g</option>
+                        <option value="couchef150g">Couche F. 150g</option>
+                        <option value="couchef170g">Couche F. 170g</option>
+                        <option value="couchef250g">Couche F. 250g</option>
+                        <option value="couchef300g">Couche F. 300g</option>
+                        <option value="triplex250g">Triplex 250g</option>
+                        <option value="triplex300g">Triplex 300g</option>
+                        <option value="triplex350g">Triplex 350g</option>
+                        <option value="duplex250g">Duplex 250g</option>
+                        <option value="duplex300g">Duplex 300g</option>
+                        <option value="aspen120g">Aspen 120g</option>
+                        <option value="aspen240g">Aspen 240g</option>
+                        <option value="vegetal150g">Vegetal 150g</option>
+                        <option value="laserfilm180g">LaserFilm 180g</option>
+                        <option value="adesivovinilfosco">Adesivo Vinil Fosco</option>
+                        <option value="adesivovinilbrilho">Adesivo Vinil Brilho</option>
+                        <option value="adesivopolieste">Adesivo Poliéster</option>
+                        <option value="adesivobopp">Adesivo BOPP</option>
+                        <option value="adesivoviniltransparente">Adesivo Vinil Transparente</option>
+                        <option value="adesivvojateado">Adesivvo Jateado</option>
+                        <option value="lonafosca">Lona Fosca</option>
+                        <option value="lonabrilho">Lona Brilho</option>
+                        <option value="lonapromo">Lona Promo</option>
+                        <option value="horlleh19">Horlle H19</option>
+                        <option value="horlleh25">Horlle H25</option>
+                        <option value="autocpiativo">Autocpiativo</option>
+                        <option value="seperbond">Seperbond</option>
+                        <option value="papelãomicroonduladoondab">Papelão Microondulado Onda B</option>
+                        <option value="papelãomicroonduladoondadupla">Papelão Microondulado Onda Dupla</option>
+                        <option value="ps05">PS 05</option>
+                        <option value="ps1mm">PS 1mm</option>
+                        <option value="ps2mm">PS 2mm</option>
+                        <option value="ps3mm">PS 3mm</option>
+                        <option value="acrilico1mm">Acrílico 1mm</option>
+                        <option value="acrilico2mm">Acrílico 2mm</option>
+                        <option value="acrilico3mm">Acrílico 3mm</option>
+                        <option value="kraft90g">Kraft 90g</option>
+                        <option value="kraft120g">Kraft 120g</option>
+                        <option value="kraft180g">Kraft 180g</option>
+                        <option value="kraft240g">Kraft 240g</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="acabamento" class="form-label">Acabamento:</label>
+                    <select id="acabamento" class="form-input" required>
+                        <option value="" disabled selected>Selecione um acabamento</option>
+                        <option value="acabamento1">Corte Especial</option>
+                        <option value="acabamento2">Numeração</option>
+                        <option value="acabamento3">Picote</option>
+                        <option value="acabamento4">Grampo</option>
+                        <option value="acabamento5">Refile</option>
+                        <option value="acabamento6">Cola</option>
+                        <option value="acabamento7">Laminação Fosca</option>
+                        <option value="acabamento8">Laminação Brilho</option>
+                        <option value="acabamento9">Plastificação</option>
+                        <option value="acabamento10">Acoplagem</option>
+                        <option value="acabamento11">Polaseal</option>
+                        <option value="acabamento12">Cola PUR</option>
+                        <option value="acabamento13">Cola Quente</option>
+                        <option value="acabamento14">Espiral</option>
+                        <option value="acabamento15">Wire-O</option>
+                        <option value="acabamento16">Vinco</option>
+                        <option value="acabamento17">Dobra</option>
+                        <option value="acabamento18">Manuseio</option>
+                        <option value="acabamento19">Aplicação</option>
+                        <option value="acabamento20">Instalação</option>
+                        <option value="acabamento21">Remoção</option>
+                        <option value="acabamento22">Depilação</option>
+                        <option value="acabamento23">Máscara</option>
+                        <option value="acabamento24">Resina</option>
+                        <option value="acabamento25">Montagem</option>
+                        <option value="acabamento26">Cordão</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="acabamento2" class="form-label">Acabamento:</label>
+                    <select id="acabamento2" class="form-input" required>
+                        <option value="" disabled selected>Selecione um acabamento</option>
+                        <option value="acabamento1">Corte Especial</option>
+                        <option value="acabamento2">Numeração</option>
+                        <option value="acabamento3">Picote</option>
+                        <option value="acabamento4">Grampo</option>
+                        <option value="acabamento5">Refile</option>
+                        <option value="acabamento6">Cola</option>
+                        <option value="acabamento7">Laminação Fosca</option>
+                        <option value="acabamento8">Laminação Brilho</option>
+                        <option value="acabamento9">Plastificação</option>
+                        <option value="acabamento10">Acoplagem</option>
+                        <option value="acabamento11">Polaseal</option>
+                        <option value="acabamento12">Cola PUR</option>
+                        <option value="acabamento13">Cola Quente</option>
+                        <option value="acabamento14">Espiral</option>
+                        <option value="acabamento15">Wire-O</option>
+                        <option value="acabamento16">Vinco</option>
+                        <option value="acabamento17">Dobra</option>
+                        <option value="acabamento18">Manuseio</option>
+                        <option value="acabamento19">Aplicação</option>
+                        <option value="acabamento20">Instalação</option>
+                        <option value="acabamento21">Remoção</option>
+                        <option value="acabamento22">Depilação</option>
+                        <option value="acabamento23">Máscara</option>
+                        <option value="acabamento24">Resina</option>
+                        <option value="acabamento25">Montagem</option>
+                        <option value="acabamento26">Cordão</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="acabamento3" class="form-label">Acabamento:</label>
+                    <select id="acabamento3" class="form-input" required>
+                        <option value="" disabled selected>Selecione um acabamento</option>
+                        <option value="acabamento1">Corte Especial</option>
+                        <option value="acabamento2">Numeração</option>
+                        <option value="acabamento3">Picote</option>
+                        <option value="acabamento4">Grampo</option>
+                        <option value="acabamento5">Refile</option>
+                        <option value="acabamento6">Cola</option>
+                        <option value="acabamento7">Laminação Fosca</option>
+                        <option value="acabamento8">Laminação Brilho</option>
+                        <option value="acabamento9">Plastificação</option>
+                        <option value="acabamento10">Acoplagem</option>
+                        <option value="acabamento11">Polaseal</option>
+                        <option value="acabamento12">Cola PUR</option>
+                        <option value="acabamento13">Cola Quente</option>
+                        <option value="acabamento14">Espiral</option>
+                        <option value="acabamento15">Wire-O</option>
+                        <option value="acabamento16">Vinco</option>
+                        <option value="acabamento17">Dobra</option>
+                        <option value="acabamento18">Manuseio</option>
+                        <option value="acabamento19">Aplicação</option>
+                        <option value="acabamento20">Instalação</option>
+                        <option value="acabamento21">Remoção</option>
+                        <option value="acabamento22">Depilação</option>
+                        <option value="acabamento23">Máscara</option>
+                        <option value="acabamento24">Resina</option>
+                        <option value="acabamento25">Montagem</option>
+                        <option value="acabamento26">Cordão</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="acabamento4" class="form-label">Acabamento:</label>
+                    <select id="acabamento4" class="form-input" required>
+                        <option value="" disabled selected>Selecione um acabamento</option>
+                        <option value="acabamento1">Corte Especial</option>
+                        <option value="acabamento2">Numeração</option>
+                        <option value="acabamento3">Picote</option>
+                        <option value="acabamento4">Grampo</option>
+                        <option value="acabamento5">Refile</option>
+                        <option value="acabamento6">Cola</option>
+                        <option value="acabamento7">Laminação Fosca</option>
+                        <option value="acabamento8">Laminação Brilho</option>
+                        <option value="acabamento9">Plastificação</option>
+                        <option value="acabamento10">Acoplagem</option>
+                        <option value="acabamento11">Polaseal</option>
+                        <option value="acabamento12">Cola PUR</option>
+                        <option value="acabamento13">Cola Quente</option>
+                        <option value="acabamento14">Espiral</option>
+                        <option value="acabamento15">Wire-O</option>
+                        <option value="acabamento16">Vinco</option>
+                        <option value="acabamento17">Dobra</option>
+                        <option value="acabamento18">Manuseio</option>
+                        <option value="acabamento19">Aplicação</option>
+                        <option value="acabamento20">Instalação</option>
+                        <option value="acabamento21">Remoção</option>
+                        <option value="acabamento22">Depilação</option>
+                        <option value="acabamento23">Máscara</option>
+                        <option value="acabamento24">Resina</option>
+                        <option value="acabamento25">Montagem</option>
+                        <option value="acabamento26">Cordão</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="precoImpAcabamento" class="form-label">Valor Impressão com Acabamento:</label>
+                    <input type="text" id="precoImpAcabamento" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="precoImpsemAcabamento" class="form-label">Valor Impressão sem Acabamento:</label>
+                    <input type="text" id="precoImpsemAcabamento" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="valorAcabamento" class="form-label">Valor Acabamento:</label>
+                    <input type="text" id="valorAcabamento" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="localTerceirizado" class="form-label">Local Terceirizado:</label>
+                    <input type="text" id="localTerceirizado" class="form-input" required>
+                </div>
+                <div class="form-teste">
+                    <label for="prazoProducao" class="form-label">Prazo Produção:</label>
+                    <input type="date" id="prazoProducao" class="form-input" required>
+                </div>
+                <div class="form-valor">
+                    <label for="valorImposto" class="form-label">Valor Imposto:</label>
+                    <input type="text" id="valorImposto" class="form-input" required>
+                </div>
+                <div class="form-valor">
+                    <label for="valorEntrega" class="form-label">Valor Entrega:</label>
+                    <input type="text" id="valorEntrega" class="form-input" required>
+                </div>
+                <div class="form-valor">
+                    <label for="valorTotal" class="form-label">Valor Total:</label>
+                    <input type="text" id="valorTotal" class="form-input" required>
+                </div>
+                <button type="submit" class="form-button">Cadastrar Orçamento</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
